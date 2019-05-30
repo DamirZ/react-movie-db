@@ -29,11 +29,11 @@ class SearchBar extends Component {
         const { searchTerm } = this.state;
 
         return (
-            <div className="SearchBar-wrapper">
+            <div className="RMDB-SearchBarWrapper">
                     <input
-                        className="search-movie-input"
+                    className="RMDB-SearchMovieInput"
                         type="text"
-                        placeholder="Search movies..."
+                        placeholder="Search database..."
                         onChange={this.handleSearchChange}
                         value={searchTerm}
                     />

@@ -1,0 +1,11 @@
+.AppMain{
+  display: flex;
+  min-height: 100vh;
+}
+
+.AppContentWrapper{
+  width: 100%;
+  padding: 25px;
+  background-color: #f6f6f6;
+  color: #000;
+}

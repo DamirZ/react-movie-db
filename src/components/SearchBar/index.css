@@ -1,7 +1,7 @@
-.SearchBar-wrapper{
+.RMDB-SearchBarWrapper{
 }
 
-.search-movie-input{
+.RMDB-SearchMovieInput{
   width: 100%;
   padding: 34px;
   font-size: 20px;
@@ -10,10 +10,10 @@
   color: white;
 }
 
-.search-movie-input::placeholder{
+.RMDB-SearchMovieInput::placeholder{
   color: rgba(255, 255, 255, 0.5);
 }
 
-.search-movie-input:focus{
+.RMDB-SearchMovieInput:focus{
   outline: 0;
 }

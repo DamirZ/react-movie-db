@@ -6,9 +6,9 @@ import './index.css';
 
 const Header = () => {
     return (
-        <div className="App-header">
-            <div className="App-logo">
-                <a className="App-header-title" href="/"><img src={placeholderLogo} alt="React Movie DB" /></a>
+        <div className="RMDB-AppHeader">
+            <div className="RMDB-AppLogo">
+                <a className="RMDB-AppHeaderTitle" href="/"><img src={placeholderLogo} alt="React Movie DB" /></a>
             </div>
             <SearchBar />
         </div>

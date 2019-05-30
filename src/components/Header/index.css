@@ -1,9 +1,9 @@
-.App-header {
+.RMDB-AppHeader {
   display: flex;
   background-color: #5bb7d6;
 }
 
-.App-header-title{
+.RMDB-AppHeaderTitle{
   padding: 12px;
   text-align: center;
   display: block;
