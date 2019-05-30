@@ -1,0 +1,12 @@
+.App-header {
+  display: flex;
+  background-color: #5bb7d6;
+}
+
+.App-header-title{
+  padding: 12px;
+  text-align: center;
+  display: block;
+  transition: all .5s ease;
+}
+
