@@ -1,0 +1,39 @@
+.RMDB-ListContainer{
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  height: auto;
+  margin: 50px -2%;
+}
+
+.RMDB-ListContainer__item{
+  flex-basis: 16%;
+  margin-bottom: 70px;
+  padding: 0 2%;
+  position: relative;
+}
+
+.RMDB-List__MovieImage{
+  width: 185px;
+  height: 278px;
+  margin: 0 auto 15px;
+  box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.4);
+}
+
+.RMDB-List__MovieTitle{
+  display: block;
+  font-size: 16px;
+  color: #000;
+  text-align: center;
+}
+
+.RMDB-List__MovieVoteAverage{
+  background-color: #F0A70D;
+  position: absolute;
+  top: -10px;
+  border-radius: 10px;
+  padding: 2px 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 13px;
+}
