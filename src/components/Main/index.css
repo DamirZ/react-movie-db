@@ -1,0 +1,21 @@
+.RMDB-AppMain {
+    display: flex;
+    justify-content: center;
+    flex-flow: row nowrap;
+}
+
+.RMDB-AppMainTitle-movie {
+    margin-right: 10px;
+    cursor: pointer;
+    color: #c4c4c4;
+}
+
+.RMDB-AppMainTitle-show {
+    margin-left: 10px;
+    cursor: pointer;
+    color: #c4c4c4;
+}
+
+.RMDB-AppMainTitle-active {
+    color: #000;
+}

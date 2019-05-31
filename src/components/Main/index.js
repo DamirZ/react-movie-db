@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { API_KEY, PATH_BASE, PATH_POPULAR, PATH_MOVIE } from '../../api';
+import { API_KEY, PATH_BASE, PATH_TOP_RATED, PATH_MOVIE, PATH_SHOW } from '../../api';
 
 import './index.css';
 import Loading from '../Loading'
@@ -10,44 +10,45 @@ class Main extends Component {
         super(props);
 
         this.state = {
-            popularMovies: {}, 
+            topRated: {},
+            activeTopRated: PATH_MOVIE,
             isLoading: false,
-            error: null
+            error: null,
         };
-
     }
 
     componentDidMount = () => {
-        this.getPopularMovies()
+        this.getTopRated(this.state.activeTopRated)
     }
 
-    getPopularMovies = () => {
-        this.setState({isLoading: true})
-        fetch(`${PATH_BASE}${PATH_MOVIE}${PATH_POPULAR}?language=en-US&api_key=${API_KEY}`)
+    getTopRated = (active) => () => {
+        console.log("active",active);
+        this.setState({activeTopRated: active})
+        this.setState({ isLoading: true })
+        fetch(`${PATH_BASE}${active}${PATH_TOP_RATED}?language=en-US&api_key=${API_KEY}`)
             .then(response => response.json())
-            .then(popularMovies => this.setPopularMovies(popularMovies))
-            .catch(error => this.setState({error: error, isLoading: false}))
+            .then(topRatedMovies => this.setTopRatedMovies(topRatedMovies))
+            .catch(error => this.setState({ error: error, isLoading: false }))
     }
 
-    setPopularMovies = (popularMovies) => {
+    setTopRated = (topRated) => {
         this.setState({
             isLoading: false,
-            popularMovies: popularMovies
+            topRated: topRated
         })
 
-        console.log("State after setting movies: ",this.state);
+        console.log("State after setting top rated: ",this.state);
     }
-
     render() {
 
-        if(this.state.isLoading) {
-            return <Loading />
-        }
-
         return (
-            <div>
-                <h1 className="RMDB-AppMainTitle">{this.props.title}</h1>
-            </div>
+            <React.Fragment>
+                {this.state.isLoading && <Loading />}
+                <div className="RMDB-AppMain">
+                    <h1 className={this.state.activeTopRated === PATH_MOVIE ? "RMDB-AppMainTitle-movie RMDB-AppMainTitle-active" : "RMDB-AppMainTitle-movie"} onClick={this.getTopRated(PATH_MOVIE)}>Popular movies</h1>
+                    <h1 className={this.state.activeTopRated === PATH_SHOW ? "RMDB-AppMainTitle-show RMDB-AppMainTitle-active" : "RMDB-AppMainTitle-show"} onClick={this.getTopRated(PATH_SHOW)}>Popular shows</h1>
+                </div>
+            </React.Fragment>
         );
 
     }

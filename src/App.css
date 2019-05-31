@@ -1,11 +1,10 @@
-.AppMain{
+.RMDB-AppMain{
   display: flex;
-  min-height: 100vh;
+  min-height: calc(100vh - 100px);
 }
 
-.AppContentWrapper{
+.RMDB-AppContentWrapper{
   width: 100%;
-  padding: 25px;
   background-color: #f6f6f6;
   color: #000;
 }
