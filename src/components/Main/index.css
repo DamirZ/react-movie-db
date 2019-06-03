@@ -17,5 +17,6 @@
 }
 
 .RMDB-AppMainTitle-active {
-    color: #000;
+    color: #fff;
+    text-decoration: underline;
 }

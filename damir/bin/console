@@ -1,0 +1,29 @@
+#!/usr/bin/env php
+
+<?php
+
+require_once dirname(dirname(__FILE__)) . '/helpers/loader.php';
+require_once dirname(dirname(__FILE__)) . '/database/Database.php';
+
+
+$commands = [
+    'db:create',
+    'db:seeds'
+];
+
+if (!in_array($argv[1], $commands)) {
+    echo "Command doesn't exist."; exit;
+}
+
+$db = new Database;
+
+switch ($argv[1]) {
+    // db:create
+    case $commands[0]:
+        $db->create();
+        break;
+    // db:seeds
+    case $commands[1]:
+        $db->seeds();
+        break;
+}

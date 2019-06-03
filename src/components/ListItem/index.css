@@ -1,0 +1,74 @@
+
+.RMDB-ListContainer__item{
+    display: flex;
+    flex-basis: 40%;
+    margin-bottom: 70px;
+    padding: 0 2%;
+    position: relative;
+}
+
+.RMDB-ListContainer__item:last-child {
+    /* margin-right: auto; */
+    /* padding-left: 2% */
+}
+
+.RMDB-List__InfoWrapper {
+    background-color: rgba(255, 255, 255, 0.2);
+    padding: 2%;
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+}
+.RMDB-List__MovieImage{
+    max-width: 185px;
+    height: 278px;
+    margin: 0 20px 0 0;
+    box-shadow: 0px 1px 8px 1px rgba(0, 0, 0, 0.4);
+    border-radius: 5px;
+}
+.RMDB-List__MovieImage img{
+    max-width: 185px;
+    min-width: 185px;
+    height: 278px;
+    border-radius: 5px;
+}
+.RMDB-List__MovieTitle{
+  display: block;
+  font-size: 22px;
+  color: #fff;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+.RMDB-List__MovieDescription{
+  display: block;
+  font-size: 16px;
+  color: #fff;
+  text-align: left;
+  font-family: Lato,sans-serif;
+}
+.RMDB-List__MovieRating{
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  text-align: left;
+}
+.RMDB-List__MovieRating > div{
+  margin-left:10px;
+}
+.RMDB-List__MovieRelease{
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  text-align: left
+  /* font-weight: 600;
+  font-style: italic; */
+}
+.RMDB-List__MovieDirector{
+  display: block;
+  font-size: 18px;
+  color: #fff;
+  text-align: left;
+}
