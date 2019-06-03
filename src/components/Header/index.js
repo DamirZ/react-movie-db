@@ -10,7 +10,8 @@ const Header = ( props ) => {
     return (
         <div className="RMDB-AppHeader">
             <div className="RMDB-AppLogo">
-                <a className="RMDB-AppHeaderTitle" href="/"><img src={placeholderLogo} alt="React Movie DB" /></a>
+                {/* <a className="RMDB-AppHeaderTitle" href="/"><img src={placeholderLogo} alt="React Movie DB" /></a> */}
+                <a className="RMDB-AppHeaderTitle" href="/">RMDB</a>
             </div>
             <SearchBar searchList={ searchList } updateList={ updateList } originalList={ originalList } />
         </div>
